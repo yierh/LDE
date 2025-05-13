@@ -19,14 +19,14 @@ $ python PGnet_torch.py
 
 The **trained agent** will be `saved` and the optimization **results** on CEC'17 benchmarks are also stored as a `.txt file`. 
 
-There are two files in the `./Results` folder. These two textfiles `LDE_CEC17_10D.txt` and `LDE_CEC17_30D.txt` are the **raw results of LDE on CEC'17 in 10D and 30D** respectively, as reported in Table.VII and Table.VIII in the original paper. You can make a comparision with yours immediately.
+There are two files in the `./Results` folder. These two textfiles `LDE_CEC17_10D.txt` and `LDE_CEC17_30D.txt` are the **raw results of LDE on CEC'17 in 10D and 30D** respectively, as reported in Table.VII and Table.VIII in the original paper. You can make a comparision with yours directly.
 
 To load the result files, run the following command:
 ```sh
-x = numpy.loadtxt('LDE_CEC17_29Fs_10D_51runs_MAXNFE.txt')
+x = numpy.loadtxt('LDE_CEC17_10D.txt')
 ```
 
-Then *x* is a [NumFunctions, NumRuns] (i.e. [29, 51]) matrix, and the i-th row of *x* records all error values of *Fi* for 10D.
+Then *x* is a [NumFunctions, NumRuns] (i.e. [29, 51]) matrix, and the i-th row of *x* records all error values of *Fi* in 10D on CEC2017 benchmark.
 
 Note that error value smaller than *1e-8* should be taken as **zero**.
 
@@ -36,7 +36,7 @@ If you find this repository useful for your work, please cite:
 
 ```sh
 @ARTICLE{LDE,  
- author={Sun, Jianyong and Liu, Xin and Bäck, Thomas and Xu, Zongben},  
+ author={Sun, Jianyong and Liu, Xin and B\"{a}ck, Thomas and Xu, Zongben},  
  journal={IEEE Transactions on Evolutionary Computation},   
  title={Learning Adaptive Differential Evolution Algorithm From Optimization Experiences by Policy Gradient},  
  year={2021}, volume={25},  number={4},  pages={666-680},  
